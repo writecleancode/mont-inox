@@ -1,0 +1,13 @@
+node_modules/
+
+hr-advanced-ui/
+hr-api-course/
+hr-astro/
+hr-firebase/
+hr-portfolio/
+hr-react-intro/
+hr-tailwind/
+hr-typescript/
+
+gulpfile.js
+package-lock.json

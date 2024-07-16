@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 32px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a,
+button,
+select {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+input {
+    font-family: inherit;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-weight: 600;
+// }
+
+
+
+
+////////////////////      NAWIGACJA     ////////////////////
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    border-bottom: 1px solid #F8F8F8;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
+
+    background-color: red;
+
+    &__brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-img {
+        width: 140px;
+    }
+}
