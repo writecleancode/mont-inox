@@ -1,3 +1,10 @@
+$black: #1A0809;
+$black75: #1A0809BF;
+$black50: #1A080980;
+$black25: #1A080940;
+$black10: #1A08091A;
+$black5: #1A08090D;
+
 *,
 *::before,
 *::after {
@@ -70,15 +77,35 @@ table {
     background-color: #fff;
     box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
 
-    background-color: red;
-
     &__brand {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: .4rem .2rem;
+    }
+
+    &__logo {
+        padding: 0.8rem;
     }
 
     &__logo-img {
         width: 140px;
+    }
+
+    &__burger-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 0.8rem;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__burger-bar {
+        display: inline-block;
+        border-radius: 100rem;
+        width: 28px;
+        height: 3px;
+        background-color: $black75;
     }
 }
