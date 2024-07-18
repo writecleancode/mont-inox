@@ -4,6 +4,8 @@ $black50: #1A080980;
 $black25: #1A080940;
 $black10: #1A08091A;
 $black5: #1A08090D;
+$primary: #CC1F2A;
+$secondary: #737373;
 
 *,
 *::before,
@@ -52,6 +54,10 @@ input {
 table {
     border-spacing: 0;
     border-collapse: collapse;
+}
+
+a {
+    color: $black;
 }
 
 // h1,
@@ -106,6 +112,59 @@ table {
         border-radius: 100rem;
         width: 28px;
         height: 3px;
-        background-color: $black75;
+        background-color: #696969;
+
+        &--top {
+            transform-origin: right center;
+            transition: transform .2s;
+        }
+
+        &--middle {
+            transition-delay: .26s;
+        }
+
+        &--bottom {
+            transition: transform .2s, translate .2s .2s;
+            transform-origin: left center;
+        }
+    }
+
+    &__links {
+        padding: 1rem;
+        border-top: 1px solid #ededed;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    &__list-link {
+        display: block;
+        padding: 0.2rem 0;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        // background-color: royalblue;
+    }
+
+    .active {
+        .navbar__burger-bar {
+            &--top {
+                transform: translate(-4px, -3px) rotate(-45deg);
+                transition: transform .2s .2s;
+            }
+
+            &--middle {
+                opacity: 0;
+                transition-delay: .06s;
+            }
+
+            &--bottom {
+                translate: 0 -14px;
+                transform: translate(4px, -3px) rotate(45deg);
+                transition: translate .2s, transform .2s .2s;
+            }
+        }
     }
 }
