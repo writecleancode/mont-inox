@@ -78,16 +78,16 @@ a {
     position: fixed;
     top: 0;
     z-index: 9999;
-    border-bottom: 1px solid #F8F8F8;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
-
+    
     &__brand {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: .4rem .2rem;
+        border-bottom: 1px solid #F8F8F8;
+        background-color: #fff;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
     }
 
     &__logo {
@@ -116,15 +116,15 @@ a {
 
         &--top {
             transform-origin: right center;
-            transition: transform .2s;
+            transition: transform .15s ease-in;
         }
 
         &--middle {
-            transition-delay: .26s;
+            transition-delay: .21s;
         }
 
         &--bottom {
-            transition: transform .2s, translate .2s .2s;
+            transition: transform .15s ease-in, translate .15s .15s ease-out;
             transform-origin: left center;
         }
     }
@@ -132,6 +132,11 @@ a {
     &__links {
         padding: 1rem;
         border-top: 1px solid #ededed;
+        border-bottom: 1px solid #ededed;
+        background-color: #fff;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+        transition: clip-path .38s;
     }
 
     &__list {
@@ -145,26 +150,29 @@ a {
         padding: 0.2rem 0;
         font-size: 1.7rem;
         text-transform: uppercase;
-        // background-color: royalblue;
+    }
+}
+
+.active {
+    .navbar__burger-bar {
+        &--top {
+            transform: translate(-4px, -3px) rotate(-45deg);
+            transition: transform .15s .15s ease-out;
+        }
+
+        &--middle {
+            opacity: 0;
+            transition-delay: .06s;
+        }
+
+        &--bottom {
+            translate: 0 -14px;
+            transform: translate(4px, -3px) rotate(45deg);
+            transition: translate .15s ease-in, transform .15s .15s ease-out;
+        }
     }
 
-    .active {
-        .navbar__burger-bar {
-            &--top {
-                transform: translate(-4px, -3px) rotate(-45deg);
-                transition: transform .2s .2s;
-            }
-
-            &--middle {
-                opacity: 0;
-                transition-delay: .06s;
-            }
-
-            &--bottom {
-                translate: 0 -14px;
-                transform: translate(4px, -3px) rotate(45deg);
-                transition: translate .2s, transform .2s .2s;
-            }
-        }
+    &.navbar__links {
+        clip-path: polygon(0 0, 100% 0, 100% 113%, 0 113%);
     }
 }
