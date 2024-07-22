@@ -77,9 +77,9 @@ a {
 .navbar {
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 99;
     width: 100%;
-    
+
     &__brand {
         display: flex;
         justify-content: space-between;
@@ -130,19 +130,23 @@ a {
     }
 
     &__links {
+        position: absolute;
         padding: 1rem;
         border-top: 1px solid #ededed;
         border-bottom: 1px solid #ededed;
+        width: 100%;
         background-color: #fff;
         box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
         clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+        pointer-events: none;
         transition: clip-path .38s;
     }
 
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 0.6rem;
+        list-style: none;
     }
 
     &__list-link {
@@ -174,5 +178,6 @@ a {
 
     &.navbar__links {
         clip-path: polygon(0 0, 100% 0, 100% 113%, 0 113%);
+        pointer-events: auto;
     }
 }
