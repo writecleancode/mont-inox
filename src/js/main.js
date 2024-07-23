@@ -6,6 +6,14 @@ const navbarLinks = document.querySelectorAll('[data-nav]');
 const handleMovileNavigation = () => {
 	burgerBtnElement.classList.toggle('active');
 	navbarLinksListElement.classList.toggle('active');
+
+	if (navbarLinksListElement.classList.contains('active')) {
+		burgerBtnElement.setAttribute('aria-label', 'ukryj nawigację');
+		navbarLinksListElement.removeAttribute('inert');
+	} else {
+		burgerBtnElement.setAttribute('aria-label', 'pokaż nawigację');
+		navbarLinksListElement.setAttribute('inert', '');
+	}
 };
 
 const handleCloseMobileNav = () => {
