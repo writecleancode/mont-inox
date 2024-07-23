@@ -91,6 +91,7 @@ a {
     }
 
     &__logo {
+        display: inline-block;
         padding: 0.8rem;
     }
 
@@ -207,6 +208,61 @@ a {
         &__list-link {
             padding-top: 0.4rem;
             padding-bottom: 0.4rem;
+        }
+    }
+}
+
+// =============================================================================
+
+
+@media (min-width: 800px) {
+    .navbar {
+        border-bottom: 1px solid #F8F8F8;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.6rem 2.4rem;
+            padding: 2.4rem 3.2rem;
+        }
+
+        &__brand {
+            display: block;
+            padding: 0;
+            border-bottom: none;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        &__logo {
+            margin: -0.8rem -1.6rem;
+            padding: 0.8rem 1.6rem;
+        }
+
+        &__burger-btn {
+            display: none;
+        }
+
+        &__links {
+            position: static;
+            margin: -0.8rem -1.6rem;
+            padding: 0;
+            border: none;
+            width: auto;
+            background-color: transparent;
+            box-shadow: none;
+            clip-path: none;
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: calc(4rem - 3.2rem);
+        }
+
+        &__list-link {
+            padding: 0.8rem 1.6rem;
         }
     }
 }
