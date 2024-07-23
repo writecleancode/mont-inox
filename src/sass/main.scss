@@ -93,10 +93,15 @@ a {
     &__logo {
         display: inline-block;
         padding: 0.8rem;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .7;
+        }
     }
 
     &__logo-img {
-        width: 140px;
+        max-width: 140px;
     }
 
     &__burger-btn {
@@ -139,7 +144,7 @@ a {
         background-color: #fff;
         box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
         clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-        transition: clip-path .38s;
+        transition: clip-path .3s;
     }
 
     &__list {
@@ -150,11 +155,36 @@ a {
     }
 
     &__list-link {
+        position: relative;
         display: block;
         padding: 0.2rem 0;
         font-size: 1.7rem;
         font-weight: 500;
         text-transform: uppercase;
+        transition: color .3s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 3px;
+            background-color: $primary;
+            scale: 0 1;
+            transform-origin: right;
+            transition: scale .3s;
+        }
+
+
+        &:hover {
+            color: $primary;
+
+            &::after {
+                scale: 1;
+                transform-origin: left;
+            }
+        }
     }
 }
 
@@ -198,7 +228,7 @@ a {
         }
 
         &__logo-img {
-            width: 160px;
+            max-width: 160px;
         }
 
         &__links {
@@ -263,6 +293,42 @@ a {
 
         &__list-link {
             padding: 0.8rem 1.6rem;
+
+            &::after {
+                bottom: -0.8rem;
+                left: -0.3rem;
+                width: calc(100% + 0.6rem);
+            }
+        }
+    }
+}
+
+// =============================================================================
+
+
+@media (min-width:1400px) {
+    .navbar {
+        &__wrapper {
+            max-width: calc(1400px + 2 * 3.2rem);
+            margin: 0 auto;
+        }
+
+        &__logo-img {
+            max-width: 192px;
+        }
+
+        &__list {
+            gap: calc(4.8rem - 3.2rem);
+        }
+
+        &__list-link {
+            font-size: 1.8rem;
+
+            &::after {
+                bottom: -0.8rem;
+                left: -0.7rem;
+                width: calc(100% + 1.4rem);
+            }
         }
     }
 }
