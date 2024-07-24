@@ -226,7 +226,7 @@ a {
     position: relative;
     background-image: url('../img/aboutus.jpg');
     background-size: cover;
-    background-position: 5% 50%;
+    background-position: 5%;
     z-index: 0;
 
     &::after {
@@ -456,14 +456,56 @@ a {
 // =============================================================================
 
 
-@media (min-width:1400px) {
+@media (min-width: 920px) {
+
+    .container {
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+    }
+
+    ////////////////////      HEADER     ////////////////////
+
+    .header {
+        background-position: 15%;
+
+        &__wrapper {
+            padding-top: 8.8rem;
+            padding-bottom: 10.4rem;
+        }
+
+        &__title {
+            font-size: 3.2rem;
+        }
+
+        &__card {
+            padding-top: 1.6rem;
+            padding-bottom: 1.6rem;
+            width: calc(100% / 3 - 4.8rem * 2 / 3);
+        }
+    }
+}
+
+// =============================================================================
+
+
+@media (min-width: 1300px) {
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        max-width: 1300px;
+    }
 
     ////////////////////      NAWIGACJA     ////////////////////
 
     .navbar {
         &__wrapper {
-            max-width: calc(1400px + 2 * 3.2rem);
             margin: 0 auto;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            max-width: calc(1200px + 2 * 5rem);
         }
 
         &__logo-img {
@@ -482,6 +524,39 @@ a {
                 left: -0.7rem;
                 width: calc(100% + 1.4rem);
             }
+        }
+    }
+
+    ////////////////////      HEADER     ////////////////////
+
+    .header {
+        background-position: center;
+
+        &__wrapper {
+            max-width: 1500px;
+        }
+
+        &__cards {
+            flex-wrap: nowrap;
+            gap: 4rem;
+        }
+
+        &__card {
+            width: auto;
+        }
+
+        &__cards-split-line {
+            display: block;
+            width: 1px;
+            background-color: #E6E6E6;
+            // background-color: #bfbfbf;
+            box-shadow: 0 0 8px rgba(255, 255, 255, .4);
+            // rotate: 15deg;
+            // translate: 12px;
+
+            rotate: 90deg;
+            height: 60px;
+            translate: 0 30px;
         }
     }
 }
