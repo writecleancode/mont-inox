@@ -4,6 +4,7 @@ $black50: #1A080980;
 $black25: #1A080940;
 $black10: #1A08091A;
 $black5: #1A08090D;
+$text-black: #1A0809D9;
 $primary: #CC1F2A;
 $secondary: #737373;
 
@@ -63,6 +64,11 @@ a {
 .container {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.section-title {
+    text-align: center;
+    color: $black;
 }
 
 // h1,
@@ -314,6 +320,95 @@ a {
 
     &__cards-split-line {
         display: none;
+    }
+}
+
+////////////////////      OFERTA     ////////////////////
+
+.offer {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+
+    &__title {
+        margin-bottom: 2.4rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+
+    &__textbox-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__text {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        color: $text-black;
+        line-height: 2;
+    }
+
+    &__text-pictures-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $primary;
+            inset: 2.4rem;
+            z-index: -1;
+        }
+    }
+
+    &__text-picture {
+        border: 1px solid #9e9e9e;
+        aspect-ratio: 269 / 400;
+        width: calc(50% - 2.4rem / 2);
+        object-fit: cover;
+        
+        &--bottom {
+            margin-top: 4.8rem;
+        }
+    }
+
+    &__features-wrapper {
+        padding-left: .6rem;
+        padding-right: .6rem;
+    }
+
+    &__features-pictures-wrapper {
+        display: none;
+    }
+
+    &__features-title {
+        font-size: 2rem;
+        margin-bottom: 2.4rem;
+    }
+
+    &__features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding-left: 1.6rem;
+    }
+
+    &__features-list-item {
+        // line-height: 2;
+        color: $text-black;
     }
 }
 
