@@ -394,28 +394,28 @@ a {
         }
     }
 
-    &__features-wrapper {
+    &__services-wrapper {
         padding-left: .6rem;
         padding-right: .6rem;
     }
 
-    &__features-pictures-wrapper {
+    &__services-pictures-wrapper {
         display: none;
     }
 
-    &__features-title {
+    &__services-title {
         font-size: 2rem;
         margin-bottom: 2.4rem;
     }
 
-    &__features-list {
+    &__services-list {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
         padding-left: 1.6rem;
     }
 
-    &__features-list-item {
+    &__services-list-item {
         // line-height: 2;
         color: $text-black;
     }
@@ -633,7 +633,7 @@ a {
         padding-bottom: 8.8rem;
 
         &__text-wrapper,
-        &__features-wrapper {
+        &__services-wrapper {
             padding-top: 1.6rem;
             padding-bottom: 1.6rem;
         }
@@ -685,12 +685,12 @@ a {
             }
         }
 
-        &__featuresbox-wrapper {
+        &__servicesbox-wrapper {
             display: flex;
             gap: 5.6rem;
         }
 
-        &__features-pictures-wrapper {
+        &__services-pictures-wrapper {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -709,7 +709,7 @@ a {
             }
         }
 
-        &__features-picture {
+        &__services-picture {
             margin-left: 3.2rem;
             height: calc(50% - 3.2rem / 2);
             background-size: cover;
@@ -732,7 +732,7 @@ a {
             }
         }
 
-        &__features-title {
+        &__services-title {
             margin-bottom: 3.2rem;
         }
     }
@@ -767,7 +767,7 @@ a {
             }
         }
 
-        &__features-pictures-wrapper {
+        &__services-pictures-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -781,7 +781,7 @@ a {
             }
         }
 
-        &__features-picture {
+        &__services-picture {
             margin: 0;
             height: auto;
 
@@ -889,20 +889,22 @@ a {
     ////////////////////      OFERTA     ////////////////////
 
     .offer {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
 
         &__textbox-wrapper,
-        &__featuresbox-wrapper {
+        &__servicesbox-wrapper {
             gap: 6rem;
         }
 
         &__text-wrapper,
         &__text-pictures-wrapper,
-        &__features-pictures-wrapper,
-        &__features-wrapper {
+        &__services-pictures-wrapper,
+        &__services-wrapper {
             width: 50%;
         }
 
-        &__features-picture {
+        &__services-picture {
             &--top {
                 background-position: 92%;
             }
