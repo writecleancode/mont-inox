@@ -4,7 +4,8 @@ $black50: #1A080980;
 $black25: #1A080940;
 $black10: #1A08091A;
 $black5: #1A08090D;
-$text-black: #1A0809D9;
+// $text-black: #1A0809D9;
+$text-black: #1A0809E6;
 $primary: #CC1F2A;
 $secondary: #737373;
 
@@ -637,12 +638,6 @@ a {
             padding-bottom: 1.6rem;
         }
 
-        &__features-pictures-wrapper::after {
-            aspect-ratio: 269 / 444;
-            width: calc(100% - 3.2rem);
-            height: calc(50% - 1.6rem);
-        }
-
         &__title {
             margin-bottom: 4.8rem;
             font-size: 3rem;
@@ -707,6 +702,9 @@ a {
                 position: absolute;
                 z-index: -1;
                 top: 293px;
+                width: calc(100% - 3.2rem);
+                height: calc(50% - 1.6rem);
+                aspect-ratio: 269 / 444;
                 background-color: $primary;
             }
         }
@@ -736,6 +734,79 @@ a {
 
         &__features-title {
             margin-bottom: 3.2rem;
+        }
+    }
+}
+
+// =============================================================================
+
+
+@media (min-width: 1100px) {
+
+    ////////////////////      OFERTA     ////////////////////
+
+    .offer {
+        &__text-pictures-wrapper {
+            width: 220%;
+
+            &::after {
+                inset: 3.2rem;
+            }
+        }
+
+        &__text-picture {
+            &--top {
+                width: calc(50% - 3.2rem / 2);
+                height: calc(100% - 3.2rem * 2);
+            }
+
+            &--bottom {
+                display: block;
+                width: calc(50% - 3.2rem / 2);
+                height: calc(100% - 3.2rem * 2);
+            }
+        }
+
+        &__features-pictures-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3.2rem;
+
+            &::after {
+                inset: 3.2rem;
+                width: auto;
+                height: auto;
+                aspect-ratio: auto;
+            }
+        }
+
+        &__features-picture {
+            margin: 0;
+            height: auto;
+
+            &--top {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                background-position: 73%;
+                box-shadow: 4px -4px 12px rgba(0, 0, 0, .15);
+            }
+
+            &--middle {
+                display: block;
+                grid-column: 1 / 2;
+                grid-row: 1 / 3;
+                margin-top: calc(3.2rem * 2);
+                margin-bottom: calc(3.2rem * 2);
+                background-position: 38%;
+                box-shadow: -4px 0 12px rgba(0, 0, 0, .25);
+            }
+
+            &--bottom {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+                box-shadow: 4px 4px 12px rgba(0, 0, 0, .22);
+            }
         }
     }
 }
@@ -812,6 +883,29 @@ a {
             rotate: 90deg;
             height: 60px;
             translate: 0 30px;
+        }
+    }
+
+    ////////////////////      OFERTA     ////////////////////
+
+    .offer {
+
+        &__textbox-wrapper,
+        &__featuresbox-wrapper {
+            gap: 6rem;
+        }
+
+        &__text-wrapper,
+        &__text-pictures-wrapper,
+        &__features-pictures-wrapper,
+        &__features-wrapper {
+            width: 50%;
+        }
+
+        &__features-picture {
+            &--top {
+                background-position: 92%;
+            }
         }
     }
 }
