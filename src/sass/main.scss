@@ -576,7 +576,7 @@ a {
         }
 
         &--mobile {
-            padding-left: 0.6rem;
+            padding-left: 1.6rem;
             color: $text-black;
             font-size: 2.4rem;
             font-weight: 600;
@@ -587,9 +587,9 @@ a {
 
     &__img-wrapper {
         position: relative;
+        margin-left: -1rem;
         padding-top: 1.6rem;
         padding-bottom: 1.6rem;
-        margin-left: -1rem;
         width: calc(100% + 1rem * 2);
         z-index: 1;
     }
@@ -603,7 +603,6 @@ a {
         content: '';
         position: absolute;
         right: 0;
-        width: 100px;
         width: 22%;
 
         &--top {
@@ -630,6 +629,8 @@ a {
         flex-direction: column;
         gap: 2.4rem;
         margin-top: 1.6rem;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
         color: $text-black;
         text-align: justify;
         line-height: 2;
@@ -812,6 +813,25 @@ a {
                 margin-left: 1rem;
                 margin-right: 1rem;
             }
+        }
+    }
+}
+
+// =============================================================================
+
+
+@media (min-width: 740px) {
+
+    ////////////////////      O FIRMIE     ////////////////////
+
+    .about-us {
+        &__img-wrapper {
+            padding-top: 2.4rem;
+            padding-bottom: 2.4rem;
+        }
+
+        &__img {
+            width: calc(100% - 2.4rem);
         }
     }
 }
