@@ -531,19 +531,30 @@ a {
         justify-content: center;
         align-items: center;
         gap: 1.2rem;
-        margin-top: 1.6rem;
+        margin-top: 1.2rem;
         padding: 0.8rem 1.6rem;
         border: 1px solid #EAEAEA;
         width: 100%;
         background-color: #fff;
         color: $text-black;
-        box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+        box-shadow: 0 0 8px inset rgba(0, 0, 0, .1);
         font-size: 1.6rem;
         line-height: 2;
+        transition: border-color .3s, box-shadow .3s;
+
+        &:hover {
+            border-color: $primary;
+            box-shadow: none;
+
+            .realizations__see-more-btn-icon {
+                translate: 8px;
+            }
+        }
     }
 
     &__see-more-btn-icon {
         width: 1.8rem;
+        transition: translate .3s;
     }
 }
 
@@ -670,6 +681,22 @@ a {
             font-size: 1.9rem;
         }
     }
+
+    ////////////////////      REALIZACJE     ////////////////////
+
+    .realizations {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+
+        &__picture-big {
+            width: calc(100% / 3 - 0.6rem * 2 / 3);
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
 }
 
 // =============================================================================
@@ -772,6 +799,10 @@ a {
         padding-right: 3.2rem;
     }
 
+    .section-title {
+        font-size: 3rem;
+    }
+
     ////////////////////      HEADER     ////////////////////
 
     .header {
@@ -807,7 +838,6 @@ a {
 
         &__title {
             margin-bottom: 4.8rem;
-            font-size: 3rem;
         }
 
         &__wrapper {
@@ -901,6 +931,40 @@ a {
 
         &__services-title {
             margin-bottom: 3.2rem;
+        }
+    }
+
+    ////////////////////      CECHY - Karty     ////////////////////
+
+    .features {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    ////////////////////      REALIZACJE     ////////////////////
+
+    .realizations {
+        padding-top: 8.8rem;
+        padding-bottom: 8.8rem;
+
+        &__title {
+            margin-bottom: 4.8rem;
+        }
+
+        &__pictures-wrapper {
+            gap: 0.4rem;
+        }
+
+        &__picture-big {
+            width: calc(100% / 5 - 0.4rem * 4 / 5);
+
+            &:last-child {
+                display: inline;
+            }
+        }
+
+        &__see-more-btn {
+            margin-top: 0.8rem;
         }
     }
 }
@@ -1104,8 +1168,22 @@ a {
     ////////////////////      CECHY - Karty     ////////////////////
 
     .features {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+
         &__cards-wrapper {
             gap: 4rem;
+        }
+    }
+
+    ////////////////////      REALIZACJE     ////////////////////
+
+    .realizations {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+
+        &__see-more-btn {
+            font-size: 1.8rem;
         }
     }
 }
