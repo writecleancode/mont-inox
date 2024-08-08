@@ -873,7 +873,7 @@ a {
     }
 
     ////////////////////      REFERENCJE     ////////////////////
-     
+
     .references {
         padding-top: 1.6rem;
 
@@ -881,7 +881,8 @@ a {
             margin-bottom: 3.2rem;
         }
 
-        &__visible, &__hidden {
+        &__visible,
+        &__hidden {
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -894,7 +895,7 @@ a {
 // =============================================================================
 
 
-@media (width >= 600px) {
+@media (width >=600px) {
 
     ////////////////////      CECHY - Karty     ////////////////////
 
@@ -931,6 +932,27 @@ a {
 
         &__img {
             width: calc(100% - 2.4rem);
+        }
+    }
+
+    ////////////////////      REFERENCJE     ////////////////////
+
+    .references {
+
+        &__visible,
+        &__hidden {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.4rem;
+        }
+
+        &__reference-box {
+
+            &:nth-child(3),
+            &:nth-child(7),
+            &:nth-child(11) {
+                display: none;
+
+            }
         }
     }
 }
@@ -1214,6 +1236,21 @@ a {
             padding-right: 0;
         }
     }
+
+    ////////////////////      REFERENCJE     ////////////////////
+
+    .references {
+        padding-bottom: 6.4rem;
+
+        &__title {
+            margin-bottom: 4rem;
+            font-size: 2.4rem;
+        }
+
+        &__show-more-btn {
+            font-size: 1.6rem;
+        }
+    }
 }
 
 // =============================================================================
@@ -1307,6 +1344,26 @@ a {
                 grid-column: 2 / 3;
                 grid-row: 2 / 3;
                 box-shadow: 4px 4px 12px rgba(0, 0, 0, .22);
+            }
+        }
+    }
+
+    ////////////////////      REFERENCJE     ////////////////////
+
+    .references {
+        padding-bottom: 7.2rem;
+
+        &__visible,
+        &__hidden {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        &__reference-box {
+
+            &:nth-child(3),
+            &:nth-child(7),
+            &:nth-child(11) {
+                display: flex;
             }
         }
     }
