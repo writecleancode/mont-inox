@@ -562,8 +562,9 @@ a {
 ////////////////////      O FIRMIE     ////////////////////
 
 .about-us {
-    padding-top: 5.4rem;
-    padding-bottom: 5.4rem;
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+    scroll-margin-top: .8rem;
     background-color: #FBFBFB;
 
     &__title {
@@ -779,6 +780,8 @@ a {
     ////////////////////      O FIRMIE     ////////////////////
 
     .about-us {
+        scroll-margin-top: 2.4rem;
+
         &__company-name {
             &--mobile {
                 font-size: 2.6rem;
@@ -1077,6 +1080,42 @@ a {
 
         &__see-more-btn {
             margin-top: 0.8rem;
+        }
+    }
+
+    ////////////////////      O FIRMIE     ////////////////////
+
+    .about-us {
+        padding-top: 6.4rem;
+        padding-bottom: 6.4rem;
+
+        &__title {
+            margin-bottom: 3.2rem;
+        }
+
+        &__company-name {
+            &--mobile {
+                padding-left: 0;
+                font-size: 3rem;
+            }
+        }
+
+        &__img-wrapper {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        &__logo-img {
+            display: inline-block;
+            margin-left: 73%;
+            margin-bottom: -1.6rem;
+            height: 40px;
+            translate: 0 -6px;
+        }
+
+        &__text-container {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
