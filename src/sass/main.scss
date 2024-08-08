@@ -638,6 +638,84 @@ a {
     }
 }
 
+////////////////////      REFERENCJE     ////////////////////
+
+.references {
+    padding-bottom: 4.8rem;
+    background-color: #FBFBFB;
+
+    &__title {
+        margin-bottom: 2.4rem;
+        color: $black;
+        font-size: 2.2rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    &__visible,
+    &__hidden {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem;
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &__reference-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.2rem;
+        height: 120px;
+        background-color: #fff;
+        box-shadow: 2px 2px 4px inset rgba(0, 0, 0, .05), 2px 2px 4px rgba(0, 0, 0, .05);
+
+        &:nth-child(11) {
+            display: none;
+        }
+    }
+
+    &__reference-img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__show-more-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-top: 2.4rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.8rem 1.6rem;
+        border: none;
+        min-width: 300px;
+        background-color: transparent;
+        color: $text-black;
+        font-size: 1.5rem;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: #fff;
+            border: 1px solid #c4c4c4;
+            z-index: -1;
+            scale: 1 0;
+            transform-origin: top;
+            transition: scale .3s;
+        }
+
+        &:hover::before {
+            scale: 1 1;
+        }
+    }
+}
+
 
 
 
@@ -648,7 +726,7 @@ a {
 // =============================================================================
 
 
-@media (min-width: 560px) {
+@media (width >=560px) {
 
     .container {
         padding-left: 2.4rem;
@@ -793,12 +871,30 @@ a {
             width: calc(100% + 2.4rem * 2);
         }
     }
+
+    ////////////////////      REFERENCJE     ////////////////////
+     
+    .references {
+        padding-top: 1.6rem;
+
+        &__title {
+            margin-bottom: 3.2rem;
+        }
+
+        &__visible, &__hidden {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__reference-box:nth-child(11) {
+            display: flex;
+        }
+    }
 }
 
 // =============================================================================
 
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
 
     ////////////////////      CECHY - Karty     ////////////////////
 
@@ -823,7 +919,7 @@ a {
 // =============================================================================
 
 
-@media (min-width: 740px) {
+@media (width >=740px) {
 
     ////////////////////      O FIRMIE     ////////////////////
 
@@ -842,7 +938,7 @@ a {
 // =============================================================================
 
 
-@media (min-width: 800px) {
+@media (width >=800px) {
 
     ////////////////////      NAWIGACJA     ////////////////////
 
@@ -907,7 +1003,7 @@ a {
 // =============================================================================
 
 
-@media (min-width: 920px) {
+@media (width >=920px) {
 
     .container {
         padding-left: 3.2rem;
@@ -1123,7 +1219,7 @@ a {
 // =============================================================================
 
 
-@media (min-width: 1000px) {
+@media (width >=1000px) {
 
     ////////////////////      CECHY - Karty     ////////////////////
 
@@ -1146,7 +1242,7 @@ a {
 // =============================================================================
 
 
-@media (min-width: 1100px) {
+@media (width >=1100px) {
 
     ////////////////////      OFERTA     ////////////////////
 
@@ -1219,7 +1315,7 @@ a {
 // =============================================================================
 
 
-@media (min-width: 1300px) {
+@media (width >=1300px) {
 
     .container {
         margin-left: auto;
@@ -1336,5 +1432,13 @@ a {
         &__see-more-btn {
             font-size: 1.8rem;
         }
+    }
+
+    ////////////////////      O FIRMIE     ////////////////////
+
+    .about-us {
+        padding-top: 7.2rem;
+        padding-bottom: 7.2rem;
+        scroll-margin-top: 4.8rem;
     }
 }
