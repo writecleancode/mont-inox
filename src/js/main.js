@@ -1,7 +1,11 @@
 const navbarElement = document.querySelector('.navbar');
-const burgerBtnElement = document.querySelector('.navbar__burger-btn');
-const navbarLinksListElement = document.querySelector('.navbar__links');
-const navbarLinks = document.querySelectorAll('[data-nav]');
+const burgerBtnElement = navbarElement.querySelector('.navbar__burger-btn');
+const navbarLinksListElement = navbarElement.querySelector('.navbar__links');
+const navbarLinks = navbarElement.querySelectorAll('[data-nav]');
+
+const referencesWrapperElement = document.querySelector('.references__wrapper');
+const showMoreReferencesButton = document.querySelector('.references__show-more-btn');
+const showMoreReferencesButtonText = document.querySelector('.references__show-more-btn-text');
 
 const handleMovileNavigation = () => {
 	burgerBtnElement.classList.toggle('active');
@@ -27,6 +31,17 @@ const checkClick = e => {
 	!navbarElement.contains(e.target) && handleCloseMobileNav();
 };
 
+const handleReferencesExtension = () => {
+	referencesWrapperElement.classList.toggle('active');
+
+	if (referencesWrapperElement.classList.contains('active')) {
+		showMoreReferencesButtonText.textContent = 'Pokaż tylko wybrane referencje';
+	} else {
+		showMoreReferencesButtonText.textContent = 'Pokaż wszystkie referencje';
+	}
+};
+
 burgerBtnElement.addEventListener('click', handleMovileNavigation);
 navbarLinks.forEach(item => item.addEventListener('click', handleCloseMobileNav));
+showMoreReferencesButton.addEventListener('click', handleReferencesExtension);
 document.addEventListener('click', checkClick);

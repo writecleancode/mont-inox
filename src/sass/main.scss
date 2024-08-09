@@ -659,8 +659,24 @@ a {
         gap: 1.6rem;
     }
 
+    &__visible {
+        margin-bottom: 1.6rem;
+    }
+
+    &__hidden-wrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 2s;
+        transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        transition-timing-function: ease-in-out;
+    }
+
     &__hidden {
-        display: none;
+        overflow: hidden;
+
+        .references__reference-box:last-child {
+            margin-bottom: 0.8rem;
+        }
     }
 
     &__reference-box {
@@ -685,6 +701,7 @@ a {
     &__show-more-btn {
         position: relative;
         display: flex;
+        justify-content: center;
         align-items: center;
         gap: 1.2rem;
         margin-top: 2.4rem;
@@ -712,6 +729,26 @@ a {
 
         &:hover::before {
             scale: 1 1;
+        }
+    }
+
+    &__show-more-btn-icon {
+        transition: rotate .3s;
+    }
+
+    .active {
+        .references {
+            &__hidden-wrapper {
+                grid-template-rows: 1fr;
+            }
+
+            &__show-more-btn {
+                min-width: 316px;
+            }
+
+            &__show-more-btn-icon {
+                rotate: -180deg;
+            }
         }
     }
 }
@@ -943,6 +980,7 @@ a {
         &__hidden {
             grid-template-columns: repeat(4, 1fr);
             gap: 2.4rem;
+            margin-bottom: 2.4rem;
         }
 
         &__reference-box {
