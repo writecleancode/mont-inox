@@ -674,6 +674,8 @@ a {
 
     &__hidden {
         overflow: hidden;
+        padding-right: 0.8rem;
+        width: calc(100% + 0.8rem);
 
         .references__reference-box:last-child {
             margin-bottom: 0.8rem;
@@ -681,13 +683,21 @@ a {
     }
 
     &__reference-box {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 1.2rem;
         height: 120px;
         background-color: #fff;
-        box-shadow: 2px 2px 4px inset rgba(0, 0, 0, .05), 2px 2px 4px rgba(0, 0, 0, .05);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, .05);
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            box-shadow: 2px 2px 4px inset rgba(0, 0, 0, .05);
+        }
 
         &:nth-child(11) {
             display: none;
@@ -816,7 +826,7 @@ a {
         width: calc(100% + 1rem * 2);
         height: 50vh;
         height: 50svh;
-        min-height: 270px;        
+        min-height: 270px;
     }
 
     &__map {
