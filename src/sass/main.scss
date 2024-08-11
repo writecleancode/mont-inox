@@ -666,9 +666,10 @@ a {
     &__hidden-wrapper {
         display: grid;
         grid-template-rows: 0fr;
-        transition: grid-template-rows 2s;
+        transition: grid-template-rows 1.2s;
         transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
         transition-timing-function: ease-in-out;
+        will-change: grid-template-rows;
     }
 
     &__hidden {
@@ -750,6 +751,79 @@ a {
                 rotate: -180deg;
             }
         }
+    }
+}
+
+////////////////////      KONTAKT     ////////////////////
+
+.contact {
+    padding-top: 5.6rem;
+
+    &__title {
+        margin-bottom: 2.4rem;
+    }
+
+    &__info-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        padding-bottom: 3.2rem;
+    }
+
+    &__info-box {
+        padding-left: 0.6rem;
+
+        &--phone-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        // & > .contact__info-text {
+        //     padding-left: 0.6rem;
+        // }
+    }
+
+    &__info-icon {
+        margin-bottom: 1.6rem;
+        margin-left: -0.6rem;
+    }
+
+    &__info-text {
+        font-size: 1.7rem;
+        line-height: 2;
+
+        &--margin-bottom {
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &__info-row {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+    }
+
+    &__decoration-line {
+        height: 1px;
+        width: 236px;
+        background-color: $primary;
+    }
+
+    &__map-wrapper {
+        margin-left: -1rem;
+        width: calc(100% + 1rem * 2);
+        height: 50vh;
+        height: 50svh;
+        min-height: 270px;        
+    }
+
+    &__map {
+        display: block;
+        border: none;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -927,6 +1001,25 @@ a {
             display: flex;
         }
     }
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        scroll-margin-top: 2.4rem;
+
+        &__info-box {
+            padding-left: 0;
+        }
+
+        &__info-text {
+            font-size: 1.8rem;
+        }
+
+        &__map-wrapper {
+            margin-left: -2.4rem;
+            width: calc(100% + 2.4rem * 2);
+        }
+    }
 }
 
 // =============================================================================
@@ -1056,6 +1149,35 @@ a {
                 left: -0.3rem;
                 width: calc(100% + 0.6rem);
             }
+        }
+    }
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        &__title {
+            margin-bottom: 4.8rem;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 5.6rem;
+        }
+
+        &__info-wrapper {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            padding-right: 4rem;
+        }
+
+        &__map-wrapper {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            border-top: 1px solid #e1e1e1;
+            border-right: 1px solid #e1e1e1;
+            width: calc(100% + 2.4rem);
+            height: 100%;
         }
     }
 }
@@ -1287,6 +1409,17 @@ a {
 
         &__show-more-btn {
             font-size: 1.6rem;
+        }
+    }
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        padding-top: 6.4rem;
+
+        &__map-wrapper {
+            margin-left: -3.2rem;
+            width: calc(100% + 3.2rem);
         }
     }
 }
@@ -1535,5 +1668,22 @@ a {
         padding-top: 7.2rem;
         padding-bottom: 7.2rem;
         scroll-margin-top: 4.8rem;
+    }
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        padding-top: 7.2rem;
+        scroll-margin-top: 4.8rem;
+
+        &__wrapper {
+            gap: 7.2rem;
+        }
+
+        &__map-wrapper {
+            margin-left: 0;
+            border-left: 1px solid #e1e1e1;
+            width: auto;
+        }
     }
 }
