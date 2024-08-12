@@ -844,11 +844,6 @@ a {
     border-top: 3px solid $primary;
     background-color: #464646;
 
-    &__certificate-link,
-    &__others-box {
-        display: block;
-    }
-
     &__certificate-img,
     &__others-img {
         width: 100%;
@@ -893,6 +888,7 @@ a {
 
     &__certificate-link {
         width: calc(50% - 1.6rem / 2);
+        max-width: 260px;
     }
 
     &__sport-support-wrapper {
@@ -907,6 +903,7 @@ a {
         display: block;
         // width: calc(50% - 2.4rem / 2);
         width: calc(25% - 1.6rem * 3 / 4);
+        max-width: 120px;
     }
 
     &__sport-support-img {
@@ -931,6 +928,10 @@ a {
         gap: 2.4rem;
         margin-bottom: 4.8rem;
         padding-top: 2.4rem;
+    }
+
+    &__others-box {
+        display: block;
     }
 
     &__copyright {
@@ -1133,6 +1134,24 @@ a {
             width: calc(100% + 2.4rem * 2);
         }
     }
+
+    ////////////////////      FOOTER     ////////////////////
+
+    .footer {
+        &__others-wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__others-box {
+            width: calc(50% - 2.4rem / 2);
+        }
+
+        &__others-img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
 // =============================================================================
@@ -1291,6 +1310,58 @@ a {
             border-right: 1px solid #e1e1e1;
             width: calc(100% + 2.4rem);
             height: 100%;
+        }
+    }
+
+    ////////////////////      FOOTER     ////////////////////
+
+    .footer {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, auto);
+        }
+
+        &__certificates,
+        &__sport-support {
+            width: calc(100% - 2rem);
+        }
+
+        &__certificates {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+
+        &__sport-support {
+            margin-left: auto;
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+        }
+
+        &__separation-line {
+            grid-column: 1 / 3;
+
+            &--dashed {
+                grid-row: 2 / 3;
+            }
+
+            &--solid {
+                grid-row: 4 / 5;
+            }
+        }
+
+        &__others-wrapper {
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+        }
+
+        &__others-box {
+            width: calc(100% / 4 - 2.4rem * 3 / 4);
+        }
+
+        &__copyright {
+            grid-row: 5 / 6;
+            grid-column: 1 / 3;
         }
     }
 }
