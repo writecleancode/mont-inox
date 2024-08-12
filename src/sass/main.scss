@@ -837,6 +837,109 @@ a {
     }
 }
 
+////////////////////      FOOTER     ////////////////////
+
+.footer {
+    padding-top: 6.4rem;
+    border-top: 3px solid $primary;
+    background-color: #464646;
+
+    &__certificate-link,
+    &__others-box {
+        display: block;
+    }
+
+    &__certificate-img,
+    &__others-img {
+        width: 100%;
+    }
+
+    &__title {
+        position: relative;
+        margin-bottom: 2.4rem;
+        margin-left: calc(1.6rem + 6px + 3px);
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: calc(-1.6rem - 6px - 3px);
+            height: 24px;
+            width: 6px;
+        }
+
+        &::before {
+            background-color: #898989;
+            translate: 3px 3px;
+        }
+
+        &::after {
+            background-color: $primary;
+        }
+    }
+
+    &__certificates-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        // flex-direction: column;
+        // gap: 2.4rem;
+        gap: 1.6rem;
+        margin-bottom: 6.4rem;
+    }
+
+    &__certificate-link {
+        width: calc(50% - 1.6rem / 2);
+    }
+
+    &__sport-support-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        // gap: 2.4rem;
+        gap: 1.6rem;
+        margin-bottom: 4rem;
+    }
+
+    &__sport-support-link {
+        display: block;
+        // width: calc(50% - 2.4rem / 2);
+        width: calc(25% - 1.6rem * 3 / 4);
+    }
+
+    &__sport-support-img {
+        width: 100%;
+    }
+
+    &__separation-line {
+        display: block;
+
+        &--dashed {
+            border-bottom: 1px dashed rgba(255, 255, 255, .25);
+        }
+
+        &--solid {
+            border-bottom: 1px solid $primary;
+        }
+    }
+
+    &__others-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        margin-bottom: 4.8rem;
+        padding-top: 2.4rem;
+    }
+
+    &__copyright {
+        padding: 1.6rem;
+        color: rgba(255, 255, 255, .85);
+        text-align: center;
+    }
+}
+
 
 
 

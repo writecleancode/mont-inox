@@ -7,6 +7,8 @@ const referencesWrapperElement = document.querySelector('.references__wrapper');
 const showMoreReferencesButton = document.querySelector('.references__show-more-btn');
 const showMoreReferencesButtonText = document.querySelector('.references__show-more-btn-text');
 
+const footerYearElement = document.querySelector('.footer__copyright-year')
+
 const handleMovileNavigation = () => {
 	burgerBtnElement.classList.toggle('active');
 	navbarLinksListElement.classList.toggle('active');
@@ -41,7 +43,13 @@ const handleReferencesExtension = () => {
 	}
 };
 
+const handleFooterYear = () => {
+	const year = new Date().getFullYear()
+	footerYearElement.textContent = year ? year : '2024'
+}
+
 burgerBtnElement.addEventListener('click', handleMovileNavigation);
 navbarLinks.forEach(item => item.addEventListener('click', handleCloseMobileNav));
 showMoreReferencesButton.addEventListener('click', handleReferencesExtension);
 document.addEventListener('click', checkClick);
+handleFooterYear()
