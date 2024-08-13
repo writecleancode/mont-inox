@@ -68,8 +68,8 @@ a {
 }
 
 .section-title {
-    text-align: center;
     color: $black;
+    text-align: center;
 }
 
 // h1,
@@ -854,9 +854,8 @@ a {
         margin-bottom: 2.4rem;
         margin-left: calc(1.6rem + 6px + 3px);
         color: #fff;
-        font-size: 2rem;
-        font-weight: 700;
-        font-family: 'Inter', sans-serif;
+        font-size: 1.9rem;
+        font-weight: 600;
 
         &::before,
         &::after {
