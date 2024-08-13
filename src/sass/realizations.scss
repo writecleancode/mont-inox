@@ -1,5 +1,15 @@
-.realizations.realizations-subpage {
-    padding-top: 3.2rem;
+.realizations {
+    .realizations-subpage {
+        padding-top: 3.2rem;
+
+        &__go-back-btn {
+            &:hover {
+                .realizations__see-more-btn-icon {
+                    translate: -8px;
+                }
+            }
+        }
+    }
 }
 
 @media (width >=560px) {
@@ -14,6 +24,9 @@
             margin-bottom: 4rem;
         }
 
+        .realizations-subpage__go-back-btn {
+            margin-top: 2.4rem;
+        }
     }
 }
 
