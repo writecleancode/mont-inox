@@ -1,0 +1,24 @@
+.realizations.realizations-subpage {
+    padding-top: 3.2rem;
+}
+
+@media (width >=560px) {
+    .realizations.realizations-subpage {
+        padding-top: 4rem;
+    }
+}
+
+@media (width >=920px) {
+    .realizations {
+        .realizations__title {
+            margin-bottom: 4rem;
+        }
+
+    }
+}
+
+@media (width >=1300px) {
+    .realizations.realizations-subpage {
+        padding-top: 5.6rem;
+    }
+}
