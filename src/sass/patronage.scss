@@ -1,0 +1,107 @@
+.header {
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+    background-image: url('../img/aboutus_640.jpg');
+    background-position: 50% 74%;
+}
+
+.patronage {
+    padding-top: 3.2rem;
+    padding-bottom: 5.6rem;
+
+    &__title {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.4rem;
+        max-width: 320px;
+        font-size: 2rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        text-align: justify;
+        line-height: 2;
+    }
+}
+
+@media (width >=560px) {
+    .header {
+        padding-top: 5.6rem;
+        padding-bottom: 5.6rem;
+        background-image: url('../img/aboutus_1440.jpg');
+    }
+
+    .patronage {
+        padding-top: 4.8rem;
+
+        &__title {
+            max-width: 360px;
+            font-size: 2.2rem;
+        }
+
+        &__text {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@media (width >=920px) {
+    .header {
+        padding-top: 7.2rem;
+        padding-bottom: 7.2rem;
+    }
+
+    .patronage {
+        padding-top: 6.4rem;
+        padding-bottom: 7.2rem;
+
+        &__wrapper {
+            display: block;
+        }
+
+        &__title {
+            margin-bottom: 4rem;
+            max-width: none;
+            font-size: 2.6rem;
+            line-height: 1.6;
+        }
+
+        &__img {
+            margin-top: 1rem;
+            margin-right: 3.2rem;
+            margin-bottom: 1.6rem;
+            width: 50%;
+            max-width: 530px;
+            float: left;
+        }
+
+        &__text {
+            margin-bottom: 2.4rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (width >=1300px) {
+    .header {
+        padding-top: 9.6rem;
+        padding-bottom: 9.6rem;
+        background-image: url('../img/aboutus_2560.jpg');
+        background-position: 50% 76%;
+    }
+}
