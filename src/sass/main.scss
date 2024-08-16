@@ -1,4 +1,4 @@
-@use 'fonts' as *;
+@use 'fonts'as *;
 
 $black: #1A0809;
 $black75: #1A0809BF;
@@ -233,9 +233,9 @@ a {
 
 .header {
     position: relative;
-    background-image: url('../img/aboutus_2560.jpg');
+    background-image: url('../img/aboutus_mobile-header.jpg');
     background-size: cover;
-    background-position: 5%;
+    background-position: 10%;
     z-index: 0;
 
     &::after {
@@ -992,6 +992,9 @@ a {
     ////////////////////      HEADER     ////////////////////
 
     .header {
+        background-image: url('../img/aboutus_2560.jpg');
+        background-position: 5%;
+
         &__wrapper {
             padding-top: 7.2rem;
             padding-bottom: 7.2rem;
