@@ -1,12 +1,6 @@
 @use 'fonts'as *;
 
 $black: #1A0809;
-$black75: #1A0809BF;
-$black50: #1A080980;
-$black25: #1A080940;
-$black10: #1A08091A;
-$black5: #1A08090D;
-// $text-black: #1A0809D9;
 $text-black: #1A0809E6;
 $primary: #CC1F2A;
 $secondary: #737373;
@@ -74,14 +68,6 @@ a {
     text-align: center;
 }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     font-weight: 600;
-// }
 
 
 
@@ -418,7 +404,6 @@ a {
     }
 
     &__services-list-item {
-        // line-height: 2;
         color: $text-black;
     }
 }
@@ -791,10 +776,6 @@ a {
             align-items: flex-start;
             gap: 0.8rem;
         }
-
-        // & > .contact__info-text {
-        //     padding-left: 0.6rem;
-        // }
     }
 
     &__info-icon {
@@ -881,8 +862,6 @@ a {
     &__certificates-wrapper {
         display: flex;
         flex-wrap: wrap;
-        // flex-direction: column;
-        // gap: 2.4rem;
         gap: 1.6rem;
         margin-bottom: 6.4rem;
     }
@@ -895,14 +874,12 @@ a {
     &__sport-support-wrapper {
         display: flex;
         flex-wrap: wrap;
-        // gap: 2.4rem;
         gap: 1.6rem;
         margin-bottom: 4rem;
     }
 
     &__sport-support-link {
         display: block;
-        // width: calc(50% - 2.4rem / 2);
         width: calc(25% - 1.6rem * 3 / 4);
         max-width: 120px;
     }
@@ -1014,8 +991,6 @@ a {
         }
 
         &__card {
-            // padding-top: 3.2rem;
-            // padding-bottom: 3.2rem;
             padding-top: .8rem;
             padding-bottom: .8rem;
             padding-left: 0;
@@ -1061,10 +1036,6 @@ a {
     ////////////////////      CECHY - Karty     ////////////////////
 
     .features {
-        // &__cards-wrapper {
-        //     gap: 3.2rem;
-        // }
-
         &__card {
             padding: 3.2rem 2.4rem;
         }
@@ -1793,14 +1764,10 @@ a {
         &__cards-split-line {
             display: block;
             width: 1px;
-            background-color: #E6E6E6;
-            // background-color: #bfbfbf;
-            box-shadow: 0 0 8px rgba(255, 255, 255, .4);
-            // rotate: 15deg;
-            // translate: 12px;
-
-            rotate: 90deg;
             height: 60px;
+            background-color: #E6E6E6;
+            box-shadow: 0 0 8px rgba(255, 255, 255, .4);
+            rotate: 90deg;
             translate: 0 30px;
         }
     }
